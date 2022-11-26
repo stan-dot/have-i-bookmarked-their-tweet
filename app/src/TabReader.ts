@@ -1,17 +1,21 @@
 
-
-
+// todo use the chrome api
 export function getMatchingBookmarks(user: string): chrome.bookmarks.BookmarkTreeNode[]{
-
+    chrome.bookmarks.search(user,
+      (s) => console.log(`search finished: ${s}`)
+    );
   return []
 };
 
-function getUserFromUrl(url: string): string {
-  return "";
+// todo need to use regex
+export function getUserFromUrl(url: string): string {
+  return url
 }
 
-async function getTabUrl(): Promise<string> {
-  window.location.toString();
-  const tab = await chrome.tabs.getCurrent();
-  return tab?.url ?? "";
+export async function getTabUrl(): Promise<string>{
+  const currentTab:chrome.tabs.Tab | undefined = await chrome.tabs.getCurrent();
+  if (!currentTab) {
+    return ""
+  }
+  return currentTab.url ?? "" 
 }
