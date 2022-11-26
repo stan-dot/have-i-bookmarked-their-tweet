@@ -1,6 +1,6 @@
 {
-    "name": "Chrome React Extension TEMPLATE",
-    "description": "The power of React and TypeScript for building interactive Chrome extensions",
+    "name": "Have I bookmarked their tweet?",
+    "description": "see whether you enjoyed their tweet in the past. If not, maybe it's time to let go...",
     "version": "1.0",
     "manifest_version": 3,
     "options_page": "index.html",
@@ -12,25 +12,9 @@
         "bookmarks",
         "scripting"
     ],
-    "chrome_url_overrides": {
-        "PAGE_TO_OVERRIDE": "bookmarks.html"
-    },
-    "omnibox": {
-        "keyword": "bk/"
-    },
-    "short_name": "bkmrk",
+    "short_name": "hibtt",
     "author": "stan-dot",
     "action": {
-        "default_popup": "index.html",
-        "default_title": "Open the popup",
-        "default_icon": {
-            "16": "/images/get_started16.png",
-            "32": "/images/get_started32.png",
-            "48": "/images/get_started48.png",
-            "128": "/images/get_started128.png"
-        }
-    },
-   "action": {
         "default_popup": "index.html",
         "default_title": "Open the popup"
     },
