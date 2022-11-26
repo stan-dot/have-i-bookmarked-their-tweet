@@ -1,6 +1,6 @@
 
 // todo use the chrome api
-export function getMatchingBookmarks(user: string): chrome.bookmarks.BookmarkTreeNode[]{
+export async function getMatchingBookmarks(user: string): Promise<chrome.bookmarks.BookmarkTreeNode[]>{
     chrome.bookmarks.search(user,
       (s) => console.log(`search finished: ${s}`)
     );
