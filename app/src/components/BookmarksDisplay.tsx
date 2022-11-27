@@ -5,15 +5,12 @@ export function BookmarksDisplay(
   props: { tweetList: chrome.bookmarks.BookmarkTreeNode[] },
 ) {
   const scrollHandler = () => {
+    console.log('found a scroll event');
     const scrollMargin = 10;
-    if (
+    const newState =
       document.body.scrollTop > scrollMargin ||
-      document.documentElement.scrollTop > scrollMargin
-    ) {
-      setScrollUpButtonState("block");
-    } else {
-      setScrollUpButtonState("none");
-    }
+        document.documentElement.scrollTop > scrollMargin ? 'block' : 'none'
+    setScrollUpButtonState(newState);
   };
 
   const scrollUp = () => {
@@ -28,9 +25,7 @@ export function BookmarksDisplay(
       {props.tweetList.length > 0
         ? (
           <>
-            <div id="">
-            </div>
-            {props.tweetList.map((t) => <TweetRender tweet={t} />)}
+            {props.tweetList.map(t => <TweetRender tweet={t} />)}
             <button
               style={{ display: `${scrollUpButtonState}` }}
               onClick={scrollUp}
