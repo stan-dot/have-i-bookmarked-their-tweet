@@ -44,7 +44,7 @@ export default function App(): JSX.Element {
 
   return (
     <div className="App">
-      <UserRender user={user} />
+      <UserRender user={user} results={bkmrksList.length} />
       <BookmarksDisplay tweetList={bkmrksList} />
     </div>
   );
