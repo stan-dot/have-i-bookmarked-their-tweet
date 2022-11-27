@@ -2,7 +2,7 @@ import { atom, useAtom } from "jotai";
 import { useEffect } from "react";
 import "./App.css";
 import { BookmarksDisplay } from "./BookmarksDisplay";
-import { getMatchingBookmarks, getTabUrl, getUserFromUrl } from "./utils";
+import { getMatchingBookmarks, getUserFromUrl } from "./utils";
 
 const DEFAULT_URL = "https://github.com/1";
 const tabUrlAtom = atom(DEFAULT_URL);
@@ -36,7 +36,7 @@ export default function App(): JSX.Element {
       const url = tabs[0].url ?? "window not found";
       doOnceUrlKnown(url);
     });
-    return () => {};
+    return () => { };
   }, []);
 
   console.log(url, user, bkmrksList);
