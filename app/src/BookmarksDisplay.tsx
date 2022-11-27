@@ -1,12 +1,18 @@
-export function BookmarksDisplay(props: { list: chrome.bookmarks.BookmarkTreeNode[]; }) {
+
+
+// todo add scrollability
+export function BookmarksDisplay(props: { tweetList: chrome.bookmarks.BookmarkTreeNode[]; }) {
   return <div id="bookmarksContainer">
-    {props.list.length > 0
+    {props.tweetList.length > 0
       ?
-      props.list.map((b: chrome.bookmarks.BookmarkTreeNode) => {
-        return <p>{b.title}</p>;
-      })
-      :
+      props.tweetList.map(t => <TweetRender tweet={t} />) :
       'No bookmarks found'}
   </div>;
+}
 
+
+function TweetRender(props: { tweet: chrome.bookmarks.BookmarkTreeNode }) {
+  return <div id={props.tweet.id}>
+    <a href={props.tweet.url}>{props.tweet.title}</a>;
+  </div >
 }

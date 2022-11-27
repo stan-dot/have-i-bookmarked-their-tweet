@@ -46,7 +46,7 @@ export default function App(): JSX.Element {
       <header className="App-header">
         <p>url:{url}</p>
         <p>user:{user}</p>
-        <BookmarksDisplay list={bkmrksList} />
+        <BookmarksDisplay tweetList={bkmrksList} />
         <button onClick={() => getMatchingBookmarks(user, bookmarkCallback)}>
           search
         </button>

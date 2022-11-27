@@ -1,7 +1,9 @@
 .App {
   text-align: center;
-  width: 300px;
-  height: 100px;
+  width:fit-content;
+  height:fit-content;
+  min-height: 100px;
+  overflow:scroll;
 }
 
 .App-logo {
