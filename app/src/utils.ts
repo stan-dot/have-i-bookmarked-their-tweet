@@ -28,3 +28,15 @@ export function getUserFromUrl(url: string): string {
   }
   return "not a twitter url";
 }
+
+
+// returns all after the colon
+export function truncateTitle(title: string): string{
+  const colonIndex = title.indexOf(':');
+  if (colonIndex === -1) {
+    return title
+  }
+  const delayAfterColon = 3;
+  const finishIndex = title.indexOf(' /\ Twitter');
+  return title.slice(colonIndex + delayAfterColon, finishIndex - 1);
+}

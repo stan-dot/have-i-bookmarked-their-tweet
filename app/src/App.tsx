@@ -2,6 +2,7 @@ import { atom, useAtom } from "jotai";
 import { useEffect } from "react";
 import "./App.css";
 import { BookmarksDisplay } from "./BookmarksDisplay";
+import { UserRender } from "./UserRender";
 import { getMatchingBookmarks, getUserFromUrl } from "./utils";
 
 const DEFAULT_URL = "https://github.com/1";
@@ -28,7 +29,7 @@ export default function App(): JSX.Element {
     setUrl(url);
     const user = getUserFromUrl(url);
     getMatchingBookmarks(user, bookmarkCallback);
-    console.log(url, user, bkmrksList);
+    // console.log(url, user, bkmrksList);
   };
 
   useEffect(() => {
@@ -39,18 +40,14 @@ export default function App(): JSX.Element {
     return () => { };
   }, []);
 
-  console.log(url, user, bkmrksList);
+  // console.log(url, user, bkmrksList);
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p>url:{url}</p>
-        <p>user:{user}</p>
-        <BookmarksDisplay tweetList={bkmrksList} />
-        <button onClick={() => getMatchingBookmarks(user, bookmarkCallback)}>
-          search
-        </button>
-      </header>
+      <UserRender user={user} />
+      <BookmarksDisplay tweetList={bkmrksList} />
     </div>
   );
 }
+
+

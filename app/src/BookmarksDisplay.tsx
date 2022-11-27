@@ -1,6 +1,6 @@
+import { truncateTitle } from "./utils";
 
 
-// todo add scrollability
 export function BookmarksDisplay(props: { tweetList: chrome.bookmarks.BookmarkTreeNode[]; }) {
   return <div id="bookmarksContainer">
     {props.tweetList.length > 0
@@ -12,7 +12,8 @@ export function BookmarksDisplay(props: { tweetList: chrome.bookmarks.BookmarkTr
 
 
 function TweetRender(props: { tweet: chrome.bookmarks.BookmarkTreeNode }) {
-  return <div id={props.tweet.id}>
-    <a href={props.tweet.url}>{props.tweet.title}</a>;
+  const formattedTitle = truncateTitle(props.tweet.title);
+  return <div className="tweet" id={props.tweet.id}>
+    <a href={props.tweet.url}>{formattedTitle}</a>
   </div >
 }
