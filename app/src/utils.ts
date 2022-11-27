@@ -27,11 +27,20 @@ export function getUserFromUrl(url: string): string {
   return 'not a twitter url'
 }
 
-export async function getTabUrl(): Promise<string> {
-  const currentTab: chrome.tabs.Tab | undefined = await chrome.tabs
-    .getCurrent();
-  if (!currentTab) {
-    return "";
-  }
-  return currentTab.url ?? "";
+export function getTabUrl():string {
+  let url = "empty";
+  const query:chrome.tabs.QueryInfo = {
+    active: true,
+    currentWindow: true,
+  };
+  chrome.tabs.query(query, tabs => { url = tabs[0].url ?? "window not found"; })
+  console.log(url);
+  return url
+  // const currentTab: chrome.tabs.Tab | undefined = await chrome.tabs
+  //   .getCurrent();
+  // console.log('current tab', currentTab);
+  // if (!currentTab) {
+  //   return "";
+  // }
+  // return currentTab.url ?? "";
 }

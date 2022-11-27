@@ -4,13 +4,17 @@ import "./App.css";
 import { BookmarksDisplay } from "./BookmarksDisplay";
 import { getMatchingBookmarks, getTabUrl, getUserFromUrl } from "./utils";
 
-const DEFAULT_URL = "https://github.com/";
+const DEFAULT_URL = "https://github.com/1";
 const tabUrlAtom = atom(DEFAULT_URL);
 
 const DEFAULT_BOOKMARKS: chrome.bookmarks.BookmarkTreeNode[] = [];
 const bkmrksAtom = atom(DEFAULT_BOOKMARKS);
 
 const userFromUrl = atom((get) => getUserFromUrl(get(tabUrlAtom)));
+const query: chrome.tabs.QueryInfo = {
+  active: true,
+  currentWindow: true,
+};
 
 export default function App(): JSX.Element {
   const [url, setUrl] = useAtom(tabUrlAtom);
@@ -19,14 +23,20 @@ export default function App(): JSX.Element {
 
   const bookmarkCallback = (list: chrome.bookmarks.BookmarkTreeNode[]): void =>
     setBkmrksList(list);
+
+  const doOnceUrlKnown = (url: string): void => {
+    setUrl(url);
+    const user = getUserFromUrl(url);
+    getMatchingBookmarks(user, bookmarkCallback);
+    console.log(url, user, bkmrksList);
+  };
+
   useEffect(() => {
-    getTabUrl().then((url: string) => {
-      setUrl(url);
-      const user = getUserFromUrl(url);
-      getMatchingBookmarks(user, bookmarkCallback);
-      console.log(url, user, bkmrksList);
+    chrome.tabs.query(query, (tabs) => {
+      const url = tabs[0].url ?? "window not found";
+      doOnceUrlKnown(url);
     });
-    return () => { };
+    return () => {};
   }, []);
 
   console.log(url, user, bkmrksList);
