@@ -10,7 +10,7 @@ export async function getMatchingBookmarks(
 
 export function getUserFromUrl(url: string): string {
   const regex1: RegExp = new RegExp(
-    /https?:\/\/(www\.)?twitter\.com\/(\w+)?/
+    /https?:\/\/(www\.)?(twitter\.com\/(\w+)?)/
     // /https?:\/\/(www\.)?twitter\.com\/(#!/)?([/]+)(\/\w+)*$/
     // "^https?://(www\.)?twitter\.com/(#!/)?([^/]+)(/\w+)*$",
     // "^https?:\/\/(?:www\.)?twitter\.com\/(?:#!\/)?@?([^/?#]*)(?:[?#].*)?$",
@@ -18,9 +18,10 @@ export function getUserFromUrl(url: string): string {
   const match = url.match(regex1);
   console.log(match)
   try {
-    const v1 = match![1] ?? "nothing";
+    // second capturing group is for the username, the first one is for www string
+    const v1 = match![3] ?? "nothing";
     console.log(v1);
-    return v1;
+    return match![2] ?? v1
   } catch (error) {
     console.log("e", error);
   }
