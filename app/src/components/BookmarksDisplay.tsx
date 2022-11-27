@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { truncateTitle } from "./utils";
+import { TweetRender } from "./TweetRender";
 
 export function BookmarksDisplay(
   props: { tweetList: chrome.bookmarks.BookmarkTreeNode[] },
 ) {
   const scrollHandler = () => {
-    const scrollMargin = 20;
+    const scrollMargin = 10;
     if (
       document.body.scrollTop > scrollMargin ||
       document.documentElement.scrollTop > scrollMargin
@@ -46,11 +46,3 @@ export function BookmarksDisplay(
   );
 }
 
-function TweetRender(props: { tweet: chrome.bookmarks.BookmarkTreeNode }) {
-  const formattedTitle = truncateTitle(props.tweet.title);
-  return (
-    <div className="tweet" id={props.tweet.id}>
-      <a href={props.tweet.url}>{formattedTitle}</a>
-    </div>
-  );
-}

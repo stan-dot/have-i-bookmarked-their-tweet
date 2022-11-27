@@ -24,7 +24,9 @@
 .header{
   background-color: #282c34;
   min-height: 20px;
+  min-width: 80px;
   display: flex;
+  /* position: fixed; */
   flex-direction: row;
   justify-content:left;
   font-size: calc(10px + 2vmin);
@@ -39,7 +41,7 @@
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
+  background-color: rgb(22, 130, 144); /* Set a background color */
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
