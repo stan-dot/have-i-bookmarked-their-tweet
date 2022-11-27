@@ -26,14 +26,14 @@ export function BookmarksDisplay(
         ? (
           <>
             {props.tweetList.map(t => <TweetRender tweet={t} />)}
-            <button
+            {/* <button
               style={{ display: `${scrollUpButtonState}` }}
               onClick={scrollUp}
               id="scrolltop"
               title="Go to top"
             >
               Top
-            </button>
+            </button> */}
           </>
         )
         : "No bookmarks found"}
