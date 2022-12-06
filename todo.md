@@ -5,8 +5,9 @@
 
 - [ ] add dark mode
 - [ ] add smart handling of links-inside-links
-- [ ] add options page
+- [ ] add link to bio
 
+- [ ] add options page
 
 
 # later

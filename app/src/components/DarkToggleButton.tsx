@@ -1,3 +1,4 @@
+import { ModeToggleIcon } from "./icons/ModeToggleIcon";
 
 
 export function DarkToggleButton() {
@@ -12,7 +13,9 @@ export function DarkToggleButton() {
     }
   };
 
-  return <button className="btn-toggle" onClick={e => handleClick()}>
-    toggle
+  return <button className="btn-toggle contrast-elem" style={{
+    border: 'none',
+  }} onClick={e => handleClick()}>
+    <ModeToggleIcon  highlight={true} />
   </button>
 }

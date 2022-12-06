@@ -22,13 +22,18 @@
   }
 }
 
+.contrast-elem{
+  background-color: var(--contrast-colour);
+}
+
 .App {
   width: 357px;
+  min-width: 357px;
   height: fit-content;
   min-height: 600px;
   /* these are dimensions of metamask extension*/
-  margin: 3px;
-  border-radius: 3px;
+  /* margin: 3px; */
+  /* border-radius: 3px; */
   background: var(--bkg-color);
 }
 
@@ -37,6 +42,15 @@
   border: 1px solid var(--contrast-color);
   /* color: var(--text-color); */
   border-radius: 3px;
+}
+
+.panel-item{
+  color: var(--text-color);
+  justify-content: center;
+}
+
+#panel-item-2{
+  display: flex;
 }
 
 .username {
@@ -86,6 +100,6 @@
   /* Rounded corners */
   font-size: 18px;
   /* Increase font size */
-  opacity: 0.3;
+  opacity: 0.6;
 }
 

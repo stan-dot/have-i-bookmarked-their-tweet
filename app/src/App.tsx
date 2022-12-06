@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { BookmarksDisplay } from "./components/BookmarksDisplay";
 import { DarkToggleButton } from "./components/DarkToggleButton";
-import { SearchIcon } from "./components/icons/SearchIcon";
+import { SearchIcon } from "./components/icons/Search.Icon";
 import { UserRender } from "./components/UserRender";
 import { getMatchingBookmarks, getUserFromUrl } from "./components/utils";
 
@@ -50,7 +50,9 @@ export default function App(): JSX.Element {
       <div className="panel">
         <UserRender user={user} results={bkmrksList.length}>
           <>
-            <SearchIcon highlight={searchHighlight} />
+            <div className="contrast-elem">
+              <SearchIcon highlight={searchHighlight} />
+            </div>
             <input value={query} onChange={e => setQuery(e.target.value)}
               onFocus={e => setSearchHighlight(true)}
               onBlur={e => setSearchHighlight(false)}
