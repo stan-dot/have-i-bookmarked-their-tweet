@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { BookmarksDisplay } from "./components/BookmarksDisplay";
 import { DarkToggleButton } from "./components/DarkToggleButton";
+import { SearchIcon } from "./components/SearchIcon";
 import { UserRender } from "./components/UserRender";
 import { getMatchingBookmarks, getUserFromUrl } from "./components/utils";
 
@@ -40,18 +41,20 @@ export default function App(): JSX.Element {
 
   const filteredItems = query === "" ? bkmrksList : bkmrksList.filter(i => {
     return i.title.includes(query.toLowerCase())
+
   })
+  const [searchHighlight, setSearchHighlight] = useState(false);
 
   return (
     <div className="App">
       <div className="panel">
         <UserRender user={user} results={bkmrksList.length}>
           <>
-            <div>
-              search:
-              <input value={query} onChange={e => setQuery(e.target.value)}
-                type="search" />
-            </div>
+            <SearchIcon highlight={searchHighlight} />
+            <input value={query} onChange={e => setQuery(e.target.value)}
+              onFocus={e => setSearchHighlight(true)}
+              onBlur={e => setSearchHighlight(false)}
+              type="search" />
             <DarkToggleButton />
           </>
         </UserRender>

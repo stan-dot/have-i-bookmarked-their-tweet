@@ -53,8 +53,8 @@ body.dark-theme {
   min-width: 80px;
   display: flex;
   /* position: fixed; */
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   /* color: white; */
   border-radius: 3px;
