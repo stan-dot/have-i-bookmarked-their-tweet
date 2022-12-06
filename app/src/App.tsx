@@ -2,6 +2,7 @@ import { atom, useAtom } from "jotai";
 import { useEffect, useState } from "react";
 import "./App.css";
 import { BookmarksDisplay } from "./components/BookmarksDisplay";
+import { DarkToggleButton } from "./components/DarkToggleButton";
 import { UserRender } from "./components/UserRender";
 import { getMatchingBookmarks, getUserFromUrl } from "./components/utils";
 
@@ -45,16 +46,20 @@ export default function App(): JSX.Element {
     <div className="App">
       <div className="panel">
         <UserRender user={user} results={bkmrksList.length}>
-          <div>
-            search:
-            <input value={query} onChange={e => setQuery(e.target.value)}
-              type="search" />
-          </div>
+          <>
+            <div>
+              search:
+              <input value={query} onChange={e => setQuery(e.target.value)}
+                type="search" />
+            </div>
+            <DarkToggleButton />
+          </>
         </UserRender>
       </div>
       <BookmarksDisplay tweetList={filteredItems} />
-    </div>
+    </div >
   );
 }
+
 
 
