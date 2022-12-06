@@ -3,14 +3,10 @@
     "description": "see whether you enjoyed their tweet in the past. If not, maybe it's time to let go...",
     "version": "1.0",
     "manifest_version": 3,
-    "options_page": "index.html",
     "incognito": "split",
     "permissions": [
         "tabs",
-        "storage",
-        "activeTab",
-        "bookmarks",
-        "scripting"
+        "bookmarks"
     ],
     "short_name": "hibtt",
     "author": "stan-dot",
