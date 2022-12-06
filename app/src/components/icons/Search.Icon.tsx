@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const SearchIcon = (props: { highlight: boolean }): JSX.Element => {
+export const SearchIcon = (): JSX.Element => {
   const iconEdge = Math.ceil(35 * 0.60);
   return (
     <svg

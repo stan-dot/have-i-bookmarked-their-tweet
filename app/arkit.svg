@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="372px" preserveAspectRatio="none" style="width:1080px;height:372px;" version="1.1" viewBox="0 0 1080 372" width="1080px" zoomAndPan="magnify"><defs/><g><!--MD5=[a6f11bb19cee6b13000111f5ad685e8b]
+cluster Dependencies--><path d="M25,278 L127,278 A4.5,4.5 0 0 1 130,281 L137,297.9688 L500,297.9688 A3,3 0 0 1 503,300.9688 L503,357 A3,3 0 0 1 500,360 L25,360 A3,3 0 0 1 22,357 L22,281 A3,3 0 0 1 25,278 " fill="#FFFFFF" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="22" x2="137" y1="297.9688" y2="297.9688"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="102" x="26" y="291.1387">Dependencies</text><!--MD5=[f302c0f5ebac8297acedf7c3fabcc7ec]
+entity @testing-library--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #383838; stroke-width: 1.0;" width="119" x="367.5" y="310"/><rect fill="#F8F8F8" height="5" style="stroke: #383838; stroke-width: 1.0;" width="10" x="362.5" y="315"/><rect fill="#F8F8F8" height="5" style="stroke: #383838; stroke-width: 1.0;" width="10" x="362.5" y="333.9688"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="99" x="377.5" y="331.1387">@testing-library</text><!--MD5=[b977fee323cf9e8ae17e4ea4466c348f]
+entity jotai--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #383838; stroke-width: 1.0;" width="47" x="237.5" y="310"/><rect fill="#F8F8F8" height="5" style="stroke: #383838; stroke-width: 1.0;" width="10" x="232.5" y="315"/><rect fill="#F8F8F8" height="5" style="stroke: #383838; stroke-width: 1.0;" width="10" x="232.5" y="333.9688"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="27" x="247.5" y="331.1387">jotai</text><!--MD5=[cb3d66c929489a99ecf6c8633ae21583]
+entity react--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #383838; stroke-width: 1.0;" width="53" x="299.5" y="310"/><rect fill="#F8F8F8" height="5" style="stroke: #383838; stroke-width: 1.0;" width="10" x="294.5" y="315"/><rect fill="#F8F8F8" height="5" style="stroke: #383838; stroke-width: 1.0;" width="10" x="294.5" y="333.9688"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="33" x="309.5" y="331.1387">react</text><!--MD5=[7a87f47ef40d6587eff4ec588325b680]
+entity react-dom--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #383838; stroke-width: 1.0;" width="85" x="137.5" y="310"/><rect fill="#F8F8F8" height="5" style="stroke: #383838; stroke-width: 1.0;" width="10" x="132.5" y="315"/><rect fill="#F8F8F8" height="5" style="stroke: #383838; stroke-width: 1.0;" width="10" x="132.5" y="333.9688"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="65" x="147.5" y="331.1387">react-dom</text><!--MD5=[88c8d796ce421dfca8961c4b6b1a0364]
+entity web-vitals--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #383838; stroke-width: 1.0;" width="84" x="38" y="310"/><rect fill="#F8F8F8" height="5" style="stroke: #383838; stroke-width: 1.0;" width="10" x="33" y="315"/><rect fill="#F8F8F8" height="5" style="stroke: #383838; stroke-width: 1.0;" width="10" x="33" y="333.9688"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="64" x="48" y="331.1387">web-vitals</text><ellipse cx="833.923" cy="27.1846" fill="#F8F8F8" rx="83.923" ry="19.1846" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="146" x="760.923" y="30.669">787.f84c772a.chunk</text><ellipse cx="415.9706" cy="26.8774" fill="#F8F8F8" rx="19.9706" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="403.9706" y="30.3618">App</text><ellipse cx="307.8471" cy="92.3694" fill="#F8F8F8" rx="69.8471" ry="16.3694" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="114" x="250.8471" y="95.8538">BookmarksDisplay</text><ellipse cx="524.0728" cy="92.6146" fill="#F8F8F8" rx="68.5728" ry="16.1146" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="111" x="468.5728" y="96.0989">DarkToggleButton</text><ellipse cx="1001.1501" cy="27.03" fill="#F8F8F8" rx="68.1501" ry="16.03" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="110" x="946.1501" y="30.5144">main.97a8b084</text><!--MD5=[17b4d22daf2b96675a00215496ed9fd8]
+entity _ModeToggleIcon--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #000000; stroke-width: 0.5;" width="121" x="455.5" y="139"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="101" x="465.5" y="160.1387">ModeToggleIcon</text><ellipse cx="834.0605" cy="92.7121" fill="#F8F8F8" rx="71.5605" ry="16.7121" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="118" x="775.0605" y="96.1965">react-app-env.d</text><ellipse cx="79.8986" cy="26.7797" fill="#F8F8F8" rx="64.3986" ry="15.2797" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="101" x="29.3986" y="30.2641">reportWebVitals</text><!--MD5=[5b330bb34b061bbd49c97aea72ecf7fa]
+entity _Search_Icon--><rect fill="#F8F8F8" height="33.9688" rx="3" ry="3" style="stroke: #000000; stroke-width: 0.5;" width="91" x="591.5" y="139"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="71" x="601.5" y="160.1387">Search.Icon</text><ellipse cx="575.1218" cy="216.9244" fill="#F8F8F8" rx="57.6218" ry="13.9244" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="84" x="533.1218" y="220.4087">setupTests</text><ellipse cx="178.7635" cy="26.8774" fill="#F8F8F8" rx="19.2635" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="23" x="167.2635" y="30.3618">src</text><ellipse cx="321.2382" cy="155.8476" fill="#F8F8F8" rx="57.2382" ry="13.8476" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="83" x="279.7382" y="159.332">TweetRender</text><ellipse cx="692.8777" cy="92.6755" fill="#F8F8F8" rx="53.8777" ry="13.1755" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="74" x="655.8777" y="96.1599">UserRender</text><ellipse cx="354.1777" cy="216.8774" fill="#F8F8F8" rx="20.6777" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="25" x="341.6777" y="220.3618">utils</text><!--MD5=[77db3189a7455a2e74a2dfe083339733]
+link App to BookmarksDisplay--><path d="M401.881,36.302 C385.547,45.906 358.212,61.977 337.239,74.309 " fill="none" id="App-&gt;BookmarksDisplay" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="332.866,76.88,342.6517,75.7663,337.1761,74.3456,338.5967,68.8701,332.866,76.88" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[234593f61dbd49d9972658d3c3199d25]
+link App to DarkToggleButton--><path d="M430.119,36.302 C446.667,46.031 474.504,62.398 495.58,74.79 " fill="none" id="App-&gt;DarkToggleButton" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="499.968,77.37,494.2361,69.3609,495.6575,74.8363,490.1822,76.2577,499.968,77.37" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[bfc32f68369adcc5eadd381ac5d98bf7]
+link App to jotai--><path d="M396.57,30.493 C353.819,36.362 253.527,52.364 230,76 C204.448,101.669 210,118.781 210,155 C210,155 210,155 210,218 C210,227.262 234.841,276.1997 249.849,304.9222 " fill="none" id="App-&gt;jotai" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="252.349,309.6926,251.7148,299.8642,250.0283,305.2638,244.6287,303.5773,252.349,309.6926" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[8b1bc8dce47f6f1c3fdd120c5f75aa32]
+link App to react--><path d="M418.571,40.196 C423.094,62.75 432,112.554 432,155 C432,155 432,155 432,218 C432,257.473 386.776,240.997 360,270 C350.346,280.4568 342.007,294.0698 336.004,305.2556 " fill="none" id="App-&gt;react" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="333.577,309.8847,341.2985,303.771,335.8986,305.4564,334.2132,300.0564,333.577,309.8847" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[33e3a1ebe287110bcc848d2b379ebff2]
+link App to _Search_Icon--><path d="M436.188,27.912 C472.961,28.8 551.529,35.669 600,76 C617.771,90.787 627.505,116.028 632.467,133.999 " fill="none" id="App-&gt;_Search_Icon" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="633.743,138.86,635.3257,129.1391,632.4729,134.024,627.5881,131.1713,633.743,138.86" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[200d6238f88417262c6434aed51e1d5d]
+link App to UserRender--><path d="M434.639,32.194 C471.432,40.484 555.991,59.585 627,76 C634.882,77.822 643.29,79.783 651.372,81.677 " fill="none" id="App-&gt;UserRender" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="656.355,82.846,648.5073,76.8951,651.4873,81.7034,646.679,84.6834,656.355,82.846" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[a421f40bc33e348f6d0029401d333902]
+link App to utils--><path d="M415.097,40.169 C412.838,65.768 405.569,126.646 385,173 C380.465,183.221 373.252,193.426 366.924,201.327 " fill="none" id="App-&gt;utils" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="363.522,205.466,372.3274,201.054,366.6973,201.6037,366.1476,195.9736,363.522,205.466" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[fc316f4bc8e76498e18624c547304db4]
+link BookmarksDisplay to react--><path d="M283.513,108.071 C272.966,115.798 261.75,126.328 256,139 C249.756,152.761 252.783,158.235 256,173 C266.98,223.39 296.11,277.0485 313.132,305.4994 " fill="none" id="BookmarksDisplay-&gt;react" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="315.756,309.8449,314.5282,300.0729,313.1716,305.5646,307.6798,304.208,315.756,309.8449" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[b6010e6802161d82242cbce9330692f6]
+link BookmarksDisplay to TweetRender--><path d="M311.28,109.019 C313.049,117.388 315.244,127.77 317.1,136.551 " fill="none" id="BookmarksDisplay-&gt;TweetRender" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="318.205,141.778,320.2593,132.1458,317.172,136.8859,312.4319,133.7986,318.205,141.778" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[81e1807a35eed55614c4b8a528f2a821]
+link DarkToggleButton to _ModeToggleIcon--><path d="M522.022,108.702 C521.042,116.243 519.84,125.477 518.77,133.709 " fill="none" id="DarkToggleButton-&gt;_ModeToggleIcon" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="518.123,138.681,523.2496,130.2716,518.7674,133.7227,515.3163,129.2405,518.123,138.681" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[7c40cb457b377a2e7f331cc76dd3a139]
+link _ModeToggleIcon to react--><path d="M504.288,173.105 C497.933,181.899 489.972,193.004 483,203 C464.876,228.984 470.245,245.833 443,262 C411.129,280.9122 391.387,250.295 360,270 C347.244,278.0083 338.587,292.7156 333.202,305.0488 " fill="none" id="_ModeToggleIcon-&gt;react" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="331.228,309.8134,338.3674,303.0289,333.1412,305.1939,330.9762,299.9678,331.228,309.8134" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[a56f83c86383858b929bb38e826756e8]
+link reportWebVitals to web-vitals--><path d="M80,42.86 C80,66.571 80,114.431 80,155 C80,155 80,155 80,218 C80,248.076 80,282.8637 80,304.6502 " fill="none" id="reportWebVitals-&gt;web-vitals" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="80,309.8982,84,300.8982,80,304.8982,76,300.8982,80,309.8982" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[02a6aafd332f844ee14e03d1fb5ec629]
+link _Search_Icon to react--><path d="M591.49,170.99 C560.918,180.856 523.793,193.885 510,203 C480.092,222.765 487.245,246.335 455,262 C435.944,271.258 378.011,258.844 360,270 C347.196,277.9311 338.541,292.6411 333.168,304.9948 " fill="none" id="_Search_Icon-&gt;react" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="331.2,309.7685,338.3282,302.9723,333.1056,305.1459,330.932,299.9233,331.2,309.7685" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[0c9f90bc376a00c15c717601279d2ee0]
+link <b>setupTests</b> to @testing-library--><path d="M558.023,230.389 C532.404,249.083 483.651,284.6604 453.379,306.7502 " fill="none" id="&lt;b&gt;setupTests&lt;/b&gt;-&gt;@testing-library" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="449.052,309.9079,458.68,307.834,453.091,306.9606,453.9644,301.3716,449.052,309.9079" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[f39319d2be27e673ece5aa4b202a2579]
+link <b>src</b> to App--><path d="M198.904,27 C262.692,27 326.48,27 390.268,27 " fill="none" id="&lt;b&gt;src&lt;/b&gt;-&gt;App" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="395.647,27,386.647,23,390.647,27,386.647,31,395.647,27" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[a7c433e228a3e00c52264d39ed1ac923]
+link <b>src</b> to react--><path d="M179,40.26 C179,62.919 179,112.887 179,155 C179,155 179,155 179,218 C179,273.285 250.737,233.206 292,270 C302.845,279.6703 311.333,293.6346 317.116,305.1991 " fill="none" id="&lt;b&gt;src&lt;/b&gt;-&gt;react" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="319.427,309.9888,319.1174,300.1448,317.2537,305.4858,311.9126,303.6221,319.427,309.9888" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[ce44ada2b58232cc0597854728dbbdbd]
+link <b>src</b> to react-dom--><path d="M174.156,39.673 C165.438,61.774 148,111.424 148,155 C148,155 148,155 148,218 C148,249.453 160.631,284.0136 170.022,305.3622 " fill="none" id="&lt;b&gt;src&lt;/b&gt;-&gt;react-dom" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="172.09,309.9722,172.0551,300.1234,170.0431,305.4104,164.7561,303.3984,172.09,309.9722" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[f1a337901fa5ebf3530ace6eeadcb81b]
+link <b>src</b> to reportWebVitals--><path d="M159.371,27 C156.136,27 152.901,27 149.666,27 " fill="none" id="&lt;b&gt;src&lt;/b&gt;-&gt;reportWebVitals" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="144.582,27,153.582,31,149.582,27,153.582,23,144.582,27" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[bd01857945c78b5bd9ee2cca320ff489]
+link TweetRender to utils--><path d="M328.324,170.094 C333.284,178.963 339.868,190.733 345.126,200.135 " fill="none" id="TweetRender-&gt;utils" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="347.588,204.537,346.6874,194.7294,345.148,200.1728,339.7047,198.6334,347.588,204.537" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[a98b69d7505b4491cc0b4dc944a25a4a]
+link <b>787.f84c772a.chunk</b> to <b>main.97a8b084</b>--><!--MD5=[047c4acfdf6ad28a24100f9cdef11bdd]
+link <b>787.f84c772a.chunk</b> to <b>react-app-env.d</b>--><script type="text/plantuml"><![CDATA[MD5=[019601b65aa7ff16f574b586c573e6b3]
+@startuml
+
+scale max 1920 width
+top to bottom direction
+
+skinparam nodesep 15
+skinparam ranksep 30
+skinparam monochrome true
+skinparam shadowing false
+skinparam defaultFontName Tahoma
+skinparam defaultFontSize 12
+skinparam roundCorner 6
+skinparam dpi 150
+skinparam arrowColor black
+skinparam arrowThickness 0.5
+skinparam packageTitleAlignment left
+
+skinparam usecase {
+  borderThickness 0.5
+}
+
+skinparam rectangle {
+  borderThickness 0.5
+}
+
+skinparam component {
+  borderThickness 1
+}
+
+
+(<b>787.f84c772a.chunk</b>)
+(App)
+(BookmarksDisplay)
+(DarkToggleButton)
+(<b>main.97a8b084</b>)
+rectangle "ModeToggleIcon" as _ModeToggleIcon
+(<b>react-app-env.d</b>)
+(reportWebVitals)
+rectangle "Search.Icon" as _Search_Icon
+(<b>setupTests</b>)
+(<b>src</b>)
+(TweetRender)
+(UserRender)
+(utils)
+
+package "Dependencies" {
+  [@testing-library]
+  [jotai]
+  [react]
+  [react-dom]
+  [web-vitals]
+}
+
+(App) --> (BookmarksDisplay)
+(App) --> (DarkToggleButton)
+(App) ---> [jotai]
+(App) ---> [react]
+(App) --> _Search_Icon
+(App) --> (UserRender)
+(App) --> (utils)
+(BookmarksDisplay) ----> [react]
+(BookmarksDisplay) --> (TweetRender)
+(DarkToggleButton) --> _ModeToggleIcon
+_ModeToggleIcon ----> [react]
+(reportWebVitals) ---> [web-vitals]
+_Search_Icon ----> [react]
+(<b>setupTests</b>) ---[thickness=1]> [@testing-library]
+(<b>src</b>) -[thickness=1]> (App)
+(<b>src</b>) ---[thickness=1]> [react]
+(<b>src</b>) ---[thickness=1]> [react-dom]
+(<b>src</b>) -[thickness=1]> (reportWebVitals)
+(TweetRender) --> (utils)
+
+@enduml
+
+
+' View and edit on https://arkit.pro
+]]></script></g></svg>

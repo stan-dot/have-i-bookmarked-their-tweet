@@ -7,13 +7,13 @@ export async function getMatchingBookmarks(
   chrome.bookmarks.search(searchTerm, (list) => callback(list));
 }
 
-const regex1: RegExp = new RegExp(
+const userGetterRegex: RegExp = new RegExp(
   /https?:\/\/(www\.)?(twitter\.com\/(\w+)?)/,
 );
 
 // third capturing group is for the username, the first one is for www string
 export function getUserFromUrl(url: string): string {
-  const match = url.match(regex1);
+  const match = url.match(userGetterRegex);
   try {
     return match![3] ?? "no tweets from this user";
   } catch (error) {
@@ -26,6 +26,6 @@ export function truncateTitle(title: string): string {
   const colonIndex = title.indexOf(":");
   if (colonIndex === -1) return title
   const delayAfterColon = 3;
-  const finishIndex = title.indexOf(" /\ Twitter");
+  const finishIndex = title.indexOf(" / Twitter");
   return title.slice(colonIndex + delayAfterColon, finishIndex - 1);
 }

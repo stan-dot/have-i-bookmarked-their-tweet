@@ -1,4 +1,4 @@
-import { truncateTitle } from "./utils";
+import { truncateTitle } from "../utils/titleUtils";
 
 export function TweetRender(props: { tweet: chrome.bookmarks.BookmarkTreeNode; }) {
   const formattedTitle = truncateTitle(props.tweet.title);

@@ -1,5 +1,5 @@
+import { useState } from "react";
 import { TweetRender } from "./TweetRender";
-import React, { useState } from "react";
 
 export function BookmarksDisplay(
   props: { tweetList: chrome.bookmarks.BookmarkTreeNode[] },
