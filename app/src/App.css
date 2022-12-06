@@ -2,12 +2,12 @@
   --text-color: #222;
   --bkg-color: #fff;
   --contrast-color:#20B7CB;
-  --test-color:#282c34;
 }
 
 .App.dark-theme {
   --text-color: #eee;
   --bkg-color: #121212;
+  --contrast-color:#20B7CB;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,10 +15,12 @@
   .App{
     --text-color: #eee;
     --bkg-color: #121212;
+    --contrast-color:#20B7CB;
   }
   .App.light-theme {
     --text-color: #222;
     --bkg-color: #fff;
+    --contrast-color:#20B7CB;
   }
 }
 
@@ -32,16 +34,17 @@
   height: fit-content;
   min-height: 600px;
   /* these are dimensions of metamask extension*/
-  /* margin: 3px; */
-  /* border-radius: 3px; */
+  margin: 3px var(--contrast-color);
+  border: 3px var(--contrast-colour);
   background: var(--bkg-color);
+  color: var(--text-color)
 }
 
 .tweet {
   margin: 1px solid;
   border: 1px solid var(--contrast-color);
-  /* color: var(--text-color); */
   border-radius: 3px;
+  color:inherit
 }
 
 .panel-item{
@@ -103,6 +106,6 @@
   opacity: 0.6;
 }
 
-a, a:visited, a:hover, a:active {
-  color: inherit;
+svg.icon{
+  fill:var(--text-color)
 }

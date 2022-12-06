@@ -8,8 +8,6 @@
 
 - [ ] add smart handling of links-inside-links
 
-
-
 # later
 - [ ] add options page
   - [ ] choice of fonts

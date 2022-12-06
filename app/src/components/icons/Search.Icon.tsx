@@ -2,9 +2,6 @@ import React from 'react';
 
 export const SearchIcon = (props: { highlight: boolean }): JSX.Element => {
   const iconEdge = Math.ceil(35 * 0.60);
-  const searchIconStyle = {
-    fill: props.highlight ? '#727272' : '#202020',
-  };
   return (
     <svg
       version="1.1"
@@ -13,7 +10,7 @@ export const SearchIcon = (props: { highlight: boolean }): JSX.Element => {
       width={iconEdge}
       height={iconEdge}
       viewBox="0 -180 735 735"
-      style={searchIconStyle}
+      className='icon'
     >
       <g>
         <path d="M255.108,0C119.863,0,10.204,109.66,10.204,244.904c0,135.245,109.659,244.905,244.904,244.905
