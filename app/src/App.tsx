@@ -35,6 +35,7 @@ export default function App(): JSX.Element {
       setUrl(url);
       getMatchingBookmarks(user, bookmarkCallback);
     });
+    console.log(user);
     return () => { };
   }, []);
 
