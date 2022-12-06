@@ -1,7 +1,11 @@
 
 # urgent
-- [ ] fix 'a' clicks not leading correctly
-- [ ] make the color scheme a bit more palatable and coherent
+- [x] fix 'a' clicks not leading correctly - EDIT: ctrl + click is fine
+- [x] make the color scheme a bit more palatable and coherent
+
+- [ ] add dark mode
+- [ ] add smart handling of links-inside-links
+- [ ] add options page
 
 
 

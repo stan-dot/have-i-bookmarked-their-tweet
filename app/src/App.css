@@ -1,11 +1,17 @@
 .App {
-  width:fit-content;
-  height:fit-content;
-  min-height: 100px;
-  min-width: 100px;
+  /* width:fit-content; */
+  /* height:fit-content; */
+  /* min-height: 100px;
+  min-width: 100px; */
+  width:357px; 
+  height:600px;
+  /* these are dimensions of metamask extension*/
   margin: 3px;
   border-radius: 3px;
 }
+/* #bookmarksContainer{
+  overflow-y: scroll;
+} */
 
 .tweet {
   margin: 1px solid;
@@ -19,22 +25,24 @@
   border: 1px solid #61dafb;
   color: #282c34;
   border-radius: 3px;
+  height: fit-content;
 }
 
 .panel{
   background-color: #282c34;
   min-height: 20px;
+  height: 58px;
   min-width: 80px;
   display: flex;
   /* position: fixed; */
   flex-direction: row;
-  justify-content:left;
+  justify-content:center;
   font-size: calc(10px + 2vmin);
   color: white;
   border-radius: 3px;
 }
 
-#scrolltop {
+#scrolltop-button {
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
@@ -47,4 +55,5 @@
   padding: 15px; /* Some padding */
   border-radius: 10px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
+  opacity: 0.3;
 }
