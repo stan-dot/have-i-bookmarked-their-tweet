@@ -6,9 +6,9 @@ export function DarkToggleButton() {
 
   const handleClick = () => {
     if (prefersDarkScheme.matches) {
-      document.body.classList.toggle("light-theme");
+      document.getElementById("app")!.classList.toggle("light-theme");
     } else {
-      document.body.classList.toggle("dark-theme");
+      document.getElementById("app")!.classList.toggle("dark-theme");
     }
   };
 

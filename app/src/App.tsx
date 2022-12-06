@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { BookmarksDisplay } from "./components/BookmarksDisplay";
 import { DarkToggleButton } from "./components/DarkToggleButton";
-import { SearchIcon } from "./components/SearchIcon";
+import { SearchIcon } from "./components/icons/SearchIcon";
 import { UserRender } from "./components/UserRender";
 import { getMatchingBookmarks, getUserFromUrl } from "./components/utils";
 
@@ -46,7 +46,7 @@ export default function App(): JSX.Element {
   const [searchHighlight, setSearchHighlight] = useState(false);
 
   return (
-    <div className="App">
+    <div className="App" id="app">
       <div className="panel">
         <UserRender user={user} results={bkmrksList.length}>
           <>

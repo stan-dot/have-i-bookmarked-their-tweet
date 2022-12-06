@@ -1,22 +1,22 @@
-body {
+.App{
   --text-color: #222;
   --bkg-color: #fff;
   --contrast-color:#20B7CB;
   --test-color:#282c34;
 }
 
-body.dark-theme {
+.App.dark-theme {
   --text-color: #eee;
   --bkg-color: #121212;
 }
 
 @media (prefers-color-scheme: dark) {
   /* defaults to dark theme */
-  body {
+  .App{
     --text-color: #eee;
     --bkg-color: #121212;
   }
-  body.light-theme {
+  .App.light-theme {
     --text-color: #222;
     --bkg-color: #fff;
   }
@@ -24,7 +24,8 @@ body.dark-theme {
 
 .App {
   width: 357px;
-  height: 600px;
+  height: fit-content;
+  min-height: 600px;
   /* these are dimensions of metamask extension*/
   margin: 3px;
   border-radius: 3px;
