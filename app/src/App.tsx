@@ -20,8 +20,38 @@ const chrome_api_query: chrome.tabs.QueryInfo = {
   currentWindow: true,
 };
 
+type SavedData = {
+  user: string;
+  bookmarks: chrome.bookmarks.BookmarkTreeNode[];
+};
+
+function saveData({ user, bookmarks }: SavedData): void {
+  chrome.storage.local.set({ user: bookmarks }).then(() => {
+    console.log("Value is set to " + bookmarks);
+  });
+}
+
+async function getBookmarksFromStorage(
+  user: string,
+): Promise<
+  { bookmarks: chrome.bookmarks.BookmarkTreeNode[]; failed: boolean }
+> {
+  await chrome.storage.local.get([user]).then((bookmarks) => {
+    console.log("Value currently is " + bookmarks);
+    return { bookmarks: bookmarks, failed: false };
+  }).catch((error) => {
+    console.error(
+      "error in fetching bookmarks from storage for user:",
+      user,
+      " error message: ",
+      error,
+    );
+    return { bookmarks: [], failed: true };
+  });
+  return { bookmarks: [], failed: true };
+}
+
 export default function App(): JSX.Element {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [url, setUrl] = useAtom(tabUrlAtom);
   const [user] = useAtom(userFromUrl);
   const [bkmrksList, setBkmrksList] = useAtom(bkmrksAtom);
@@ -30,17 +60,27 @@ export default function App(): JSX.Element {
   useEffect(() => {
     chrome.tabs.query(chrome_api_query, (tabs) => {
       const url = tabs[0].url ?? "window not found";
-      const user = getUserFromUrl(url);
       setUrl(url);
-      if (user !== "not a twitter url") {
-        getMatchingBookmarks(user, (list) => setBkmrksList(list));
-      }
     });
-    console.log(user);
-    return () => { };
-  }, [setBkmrksList, setUrl, user]);
+  }, [setUrl]);
 
-  const filteredItems = query === "" ? bkmrksList : filterAndFormatBookmarksList(bkmrksList, query);
+
+  useEffect(() => {
+    // const user = getUserFromUrl(url); // don't need this due to Atom
+    if (user !== "not a twitter url") {
+      getBookmarksFromStorage(user).then(({ bookmarks, failed }) => {
+        if (failed) {
+          getMatchingBookmarks(user, (list) => setBkmrksList(list));
+        } else {
+          setBkmrksList(bookmarks);
+        }
+      })
+    }
+  }, [setBkmrksList, url, user])
+
+  const filteredItems = query === ""
+    ? bkmrksList
+    : filterAndFormatBookmarksList(bkmrksList, query);
 
   return (
     <div className="App" id="app">
@@ -63,4 +103,3 @@ export default function App(): JSX.Element {
     </div>
   );
 }
-

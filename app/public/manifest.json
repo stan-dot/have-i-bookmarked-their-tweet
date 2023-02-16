@@ -6,7 +6,8 @@
     "incognito": "split",
     "permissions": [
         "tabs",
-        "bookmarks"
+        "bookmarks",
+        "storage"
     ],
     "short_name": "hibtt",
     "author": "stan-dot",
