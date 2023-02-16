@@ -2,6 +2,7 @@
   --text-color: #222;
   --bkg-color: #fff;
   --contrast-color: #20B7CB;
+  padding: 5px;
 }
 
 .App.dark-theme {
@@ -43,7 +44,7 @@
   margin: 1px solid;
   border: 1px solid var(--contrast-color);
   border-radius: 3px;
-  color: inherit
+  color: white;
 }
 
 .panel-item {

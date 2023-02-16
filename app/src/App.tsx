@@ -32,7 +32,9 @@ export default function App(): JSX.Element {
       const url = tabs[0].url ?? "window not found";
       const user = getUserFromUrl(url);
       setUrl(url);
-      getMatchingBookmarks(user, (list) => setBkmrksList(list));
+      if (user !== "not a twitter url") {
+        getMatchingBookmarks(user, (list) => setBkmrksList(list));
+      }
     });
     console.log(user);
     return () => { };
