@@ -1,8 +1,13 @@
-export function filterAndFormatBookmarksList(bkmrksList: chrome.bookmarks.BookmarkTreeNode[], query: string) {
-  return bkmrksList.filter(i => i.title.includes(query.toLowerCase())
-  ).map((i: chrome.bookmarks.BookmarkTreeNode) => {
-    return { ...i, title: getQueryHighlight(i.title, query) };
-  });
+export function filterAndFormatBookmarksList(
+  bkmrksList: chrome.bookmarks.BookmarkTreeNode[],
+  query: string,
+): chrome.bookmarks.BookmarkTreeNode[] {
+  if (query === "") return bkmrksList;
+  return bkmrksList.filter((i) => i.title.includes(query.toLowerCase())).map(
+    (i: chrome.bookmarks.BookmarkTreeNode) => {
+      return { ...i, title: getQueryHighlight(i.title, query) };
+    },
+  );
 }
 // todo highlight of queries
 // https://stackoverflow.com/questions/67765118/how-to-add-bold-style-to-a-substring-in-react

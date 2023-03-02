@@ -1,68 +1,41 @@
 import { atom, useAtom } from "jotai";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./App.css";
 import { BookmarksDisplay } from "./components/BookmarksDisplay";
 import { DarkToggleButton } from "./components/DarkToggleButton";
 import { SearchIcon } from "./components/icons/Search.Icon";
 import { UserRender } from "./components/UserRender";
-import { getMatchingBookmarks, getUserFromUrl } from "./utils/titleUtils";
 import { filterAndFormatBookmarksList } from "./utils/bookmarkAndQueryUtils";
+import { getBookmarksFromStorage, saveData } from "./utils/cookiesHandler";
+import { getMatchingBookmarks, getUserFromUrl } from "./utils/titleUtils";
 
-const DEFAULT_URL = "https://github.com/";
-const tabUrlAtom = atom(DEFAULT_URL);
+// TYPES
+type LoadingStatus = "loading" | "none found" | "ready" | "not a twitter url";
 
-const DEFAULT_BOOKMARKS: chrome.bookmarks.BookmarkTreeNode[] = [];
-const bkmrksAtom = atom(DEFAULT_BOOKMARKS);
-
-const userFromUrl = atom((get) => getUserFromUrl(get(tabUrlAtom)));
-const chrome_api_query: chrome.tabs.QueryInfo = {
-  active: true,
-  currentWindow: true,
-};
-
-type SavedData = {
-  user: string;
-  bookmarks: chrome.bookmarks.BookmarkTreeNode[];
-};
-
-function saveData({ user, bookmarks }: SavedData): void {
-  chrome.storage.local.set({ user: bookmarks }).then(() => {
-    console.log("Value is set to " + bookmarks);
-  });
-}
-
-async function getBookmarksFromStorage(
-  user: string,
-): Promise<
-  { bookmarks: chrome.bookmarks.BookmarkTreeNode[]; failed: boolean }
-> {
-  await chrome.storage.local.get([user]).then((bookmarks) => {
-    console.log("Value currently is " + bookmarks);
-    return { bookmarks: bookmarks, failed: false };
-  }).catch((error) => {
-    console.error(
-      "error in fetching bookmarks from storage for user:",
-      user,
-      " error message: ",
-      error,
-    );
-    return { bookmarks: [], failed: true };
-  });
-  return { bookmarks: [], failed: true };
-}
-
-type LoadingStatus = "loading" | "none found" | "ready";
+// PRIMITIVE ATOMS
+const tabUrlAtom = atom("https://github.com/");
+const bkmrksAtom = atom([] as chrome.bookmarks.BookmarkTreeNode[]);
+const queryAtom = atom("");
 const loadingAtom = atom("loading" as LoadingStatus);
+
+// DERIVATIVE ATOMS
+const userFromUrl = atom((get) => getUserFromUrl(get(tabUrlAtom)));
 
 export default function App(): JSX.Element {
   const [url, setUrl] = useAtom(tabUrlAtom);
   const [user] = useAtom(userFromUrl);
   const [bkmrksList, setBkmrksList] = useAtom(bkmrksAtom);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useAtom(queryAtom);
   const [loadingStatus, setLoadingStatus] = useAtom(loadingAtom);
 
+  const filteredItems = filterAndFormatBookmarksList(bkmrksList, query);
+
+  // USE EFFECT BLOCKS
   useEffect(() => {
-    chrome.tabs.query(chrome_api_query, (tabs) => {
+    chrome.tabs.query({
+      active: true,
+      currentWindow: true,
+    }, (tabs) => {
       const url = tabs[0].url ?? "window not found";
       setUrl(url);
     });
@@ -75,6 +48,7 @@ export default function App(): JSX.Element {
   useEffect(() => {
     // const user = getUserFromUrl(url); // don't need this due to Atom
     if (user !== "not a twitter url") {
+      setLoadingStatus("loading");
       getBookmarksFromStorage(user).then(({ bookmarks, failed }) => {
         if (failed) {
           getMatchingBookmarks(user, (list) => {
@@ -89,12 +63,10 @@ export default function App(): JSX.Element {
           setBkmrksList(bookmarks);
         }
       });
+    } else {
+      setLoadingStatus("not a twitter url");
     }
   }, [setBkmrksList, setLoadingStatus, url, user]);
-
-  const filteredItems = query === ""
-    ? bkmrksList
-    : filterAndFormatBookmarksList(bkmrksList, query);
 
   return (
     <div className="App" id="app">
@@ -118,6 +90,9 @@ export default function App(): JSX.Element {
       {loadingStatus === "loading" && <h1>Loading...</h1>}
       {loadingStatus === "none found" && (
         <h1>No bookmarked tweets from this user!</h1>
+      )}
+      {loadingStatus === "not a twitter url" && (
+        <h1>Now you are not on a Twitter page!</h1>
       )}
     </div>
   );
