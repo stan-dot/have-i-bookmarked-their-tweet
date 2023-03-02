@@ -51,11 +51,15 @@ async function getBookmarksFromStorage(
   return { bookmarks: [], failed: true };
 }
 
+type LoadingStatus = "loading" | "none found" | "ready";
+const loadingAtom = atom("loading" as LoadingStatus);
+
 export default function App(): JSX.Element {
   const [url, setUrl] = useAtom(tabUrlAtom);
   const [user] = useAtom(userFromUrl);
   const [bkmrksList, setBkmrksList] = useAtom(bkmrksAtom);
   const [query, setQuery] = useState("");
+  const [loadingStatus, setLoadingStatus] = useAtom(loadingAtom);
 
   useEffect(() => {
     chrome.tabs.query(chrome_api_query, (tabs) => {
@@ -64,19 +68,29 @@ export default function App(): JSX.Element {
     });
   }, [setUrl]);
 
+  useEffect(() => {
+    saveData({ user, bookmarks: bkmrksList });
+  }, [bkmrksList, user]);
 
   useEffect(() => {
     // const user = getUserFromUrl(url); // don't need this due to Atom
     if (user !== "not a twitter url") {
       getBookmarksFromStorage(user).then(({ bookmarks, failed }) => {
         if (failed) {
-          getMatchingBookmarks(user, (list) => setBkmrksList(list));
+          getMatchingBookmarks(user, (list) => {
+            if (list.length === 0) {
+              setLoadingStatus("none found");
+            } else {
+              setBkmrksList(list);
+              setLoadingStatus("ready");
+            }
+          });
         } else {
           setBkmrksList(bookmarks);
         }
-      })
+      });
     }
-  }, [setBkmrksList, url, user])
+  }, [setBkmrksList, setLoadingStatus, url, user]);
 
   const filteredItems = query === ""
     ? bkmrksList
@@ -99,7 +113,12 @@ export default function App(): JSX.Element {
           </>
         </UserRender>
       </div>
-      <BookmarksDisplay tweetList={filteredItems} />
+      {loadingStatus === "ready" &&
+        <BookmarksDisplay tweetList={filteredItems} />}
+      {loadingStatus === "loading" && <h1>Loading...</h1>}
+      {loadingStatus === "none found" && (
+        <h1>No bookmarked tweets from this user!</h1>
+      )}
     </div>
   );
 }
