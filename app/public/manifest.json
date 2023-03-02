@@ -1,7 +1,7 @@
 {
     "name": "Have I bookmarked their tweet?",
     "description": "see whether you enjoyed their tweet in the past. If not, maybe it's time to let go...",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "manifest_version": 3,
     "incognito": "split",
     "permissions": [
